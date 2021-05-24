@@ -1,0 +1,1647 @@
+{
+  "contractName": "TransferTrade",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "defaultSeat",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "typeOfSeat",
+          "type": "string"
+        },
+        {
+          "internalType": "uint32",
+          "name": "seatNumber",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "transferApplication",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getMyTransferringTicket",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getMyTicket",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"defaultSeat\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"typeOfSeat\",\"type\":\"string\"},{\"internalType\":\"uint32\",\"name\":\"seatNumber\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getMyTicket\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getMyTransferringTicket\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"transferApplication\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getMyTicket()\":{\"details\":\"\\ub9c8\\uc774\\ud398\\uc774\\uc9c0\\uc5d0\\uc11c \\uc18c\\uc720\\ud558\\uace0 \\uc788\\ub294 \\ud2f0\\ucf13\\uc744 \\ubcf4\\uc5ec\\uc900\\ub2e4.\"},\"getMyTransferringTicket()\":{\"details\":\"\\ub9c8\\uc774\\ud398\\uc774\\uc9c0\\uc5d0\\uc11c \\uc9c4\\ud589\\uc911\\uc778 \\uc591\\ub3c4\\uac70\\ub798 \\ud2f0\\ucf13\\uc744 \\ubcf4\\uc5ec\\uc900\\ub2e4.\"},\"transferApplication()\":{\"details\":\"\\uc591\\ub3c4 \\uc2e0\\uccad \\ucc98\\ub9ac \\ud568\\uc218\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/seung/Desktop/\\ud559\\uad50\\uc0dd\\ud65c/2021_1/\\uc885\\ud569\\uc124\\uacc41/myproject/K-ticket/contracts/TransferTrade.sol\":\"TransferTrade\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/seung/Desktop/\\ud559\\uad50\\uc0dd\\ud65c/2021_1/\\uc885\\ud569\\uc124\\uacc41/myproject/K-ticket/contracts/TransferTrade.sol\":{\"keccak256\":\"0x1ef9c669508eb67680f7dd911192305b365072a716811df221f61ba16022773c\",\"urls\":[\"bzz-raw://592d1fabfb4779231c517befa9b9a15c54422d69e31992c6636602b357d7612d\",\"dweb:/ipfs/QmZvVvW94irydNhDQqBqZX1adm78sQuAHwkX17AqNXGsFQ\"]}},\"version\":1}",
+  "bytecode": "0x608060405260405180604001604052806040518060400160405280600381526020017f56495000000000000000000000000000000000000000000000000000000000008152508152602001601e63ffffffff16815250600080820151816000019080519060200190610072929190610322565b5060208201518160010160006101000a81548163ffffffff021916908363ffffffff16021790555050506040518060a001604052806040518060400160405280600381526020017f45584f000000000000000000000000000000000000000000000000000000000081525081526020016040518060400160405280600a81526020017f323032312d30362d31380000000000000000000000000000000000000000000081525081526020016040518060400160405280600581526020017f31383a303000000000000000000000000000000000000000000000000000000081525081526020016000604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101fe5780601f106101d3576101008083540402835291602001916101fe565b820191906000526020600020905b8154815290600101906020018083116101e157829003601f168201915b505050505081526020016001820160009054906101000a900463ffffffff1663ffffffff1663ffffffff16815250508152602001620186a063ffffffff168152506002600082015181600001908051906020019061025d929190610322565b50602082015181600101908051906020019061027a929190610322565b506040820151816002019080519060200190610297929190610322565b5060608201518160030160008201518160000190805190602001906102bd929190610322565b5060208201518160010160006101000a81548163ffffffff021916908363ffffffff160217905550505060808201518160050160006101000a81548163ffffffff021916908363ffffffff160217905550505034801561031c57600080fd5b506103c7565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061036357805160ff1916838001178555610391565b82800160010185558215610391579182015b82811115610390578251825591602001919060010190610375565b5b50905061039e91906103a2565b5090565b6103c491905b808211156103c05760008160009055506001016103a8565b5090565b90565b6101fa806103d66000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063330854fc146100515780633f7daf811461005b57806391ad15ca14610065578063ee185f73146100fb575b600080fd5b610059610105565b005b610063610107565b005b61006d610109565b60405180806020018363ffffffff1663ffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156100bf5780820151818401526020810190506100a4565b50505050905090810190601f1680156100ec5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101036101c3565b005b565b565b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101a35780601f10610178576101008083540402835291602001916101a3565b820191906000526020600020905b81548152906001019060200180831161018657829003601f168201915b5050505050908060010160009054906101000a900463ffffffff16905082565b56fea265627a7a723158205d76db87d1c27647fd1ae7cefe04c21245ac63bf3985ed70a0941b19c22711ab64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063330854fc146100515780633f7daf811461005b57806391ad15ca14610065578063ee185f73146100fb575b600080fd5b610059610105565b005b610063610107565b005b61006d610109565b60405180806020018363ffffffff1663ffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156100bf5780820151818401526020810190506100a4565b50505050905090810190601f1680156100ec5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101036101c3565b005b565b565b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101a35780601f10610178576101008083540402835291602001916101a3565b820191906000526020600020905b81548152906001019060200180831161018657829003601f168201915b5050505050908060010160009054906101000a900463ffffffff16905082565b56fea265627a7a723158205d76db87d1c27647fd1ae7cefe04c21245ac63bf3985ed70a0941b19c22711ab64736f6c63430005100032",
+  "sourceMap": "36:1480:2:-;;;416:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;428:2;416:15;;;;;390:41;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;499:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;540:11;499:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;553:6;499:61;;;;;472:88;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;36:1480;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:1480:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "36:1480:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:1480:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;645:141;;;:::i;:::-;;1473:40;;;:::i;:::-;;390:41;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;390:41:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1318:52;;;:::i;:::-;;645:141;:::o;1473:40::-;:::o;390:41::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1318:52::-;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract TransferTrade {\r\n\r\n    struct TicketInfo {\r\n        string concertName;\r\n        string day;   // 나중에 타입 다시 생각하기\r\n        string time;  // 나중에 타입 다시 생각하기\r\n        Seat seat;\r\n        uint32 ticketPrice;\r\n    }\r\n\r\n    struct Seat {\r\n        string typeOfSeat;\r\n        uint32 seatNumber;\r\n    }\r\n\r\n    Seat public defaultSeat = Seat(\"VIP\", 30);\r\n    // 디폴트 티켓 생성\r\n\r\n    TicketInfo defaultTicket = TicketInfo(\"EXO\", \"2021-06-18\", \"18:00\", defaultSeat, 100000);\r\n\r\n\r\n    // 변수\r\n\r\n    /**\r\n    * @dev 양도 신청 처리 함수\r\n    */\r\n    function transferApplication() public {\r\n        // alreadyTransferringTicket을 확인\r\n        // pay\r\n        // changeTicketInfo\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 이미 거래중인 티켓인 경우\r\n    */\r\n    function alreadyTransferringTicket() internal {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.\r\n    */\r\n    function  pay() internal {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 양도거래가 끝난 티켓의 정보를 수정한다.\r\n    */\r\n    function changeTicketInfo() internal {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.\r\n    */\r\n    function getMyTransferringTicket() public {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 마이페이지에서 소유하고 있는 티켓을 보여준다.\r\n    */\r\n    function getMyTicket() public {\r\n\r\n    }\r\n}",
+  "sourcePath": "C:/Users/seung/Desktop/학교생활/2021_1/종합설계1/myproject/K-ticket/contracts/TransferTrade.sol",
+  "ast": {
+    "absolutePath": "/C/Users/seung/Desktop/학교생활/2021_1/종합설계1/myproject/K-ticket/contracts/TransferTrade.sol",
+    "exportedSymbols": {
+      "TransferTrade": [
+        117
+      ]
+    },
+    "id": 118,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 61,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 117,
+        "linearizedBaseContracts": [
+          117
+        ],
+        "name": "TransferTrade",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "TransferTrade.TicketInfo",
+            "id": 72,
+            "members": [
+              {
+                "constant": false,
+                "id": 63,
+                "name": "concertName",
+                "nodeType": "VariableDeclaration",
+                "scope": 72,
+                "src": "97:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 62,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "97:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 65,
+                "name": "day",
+                "nodeType": "VariableDeclaration",
+                "scope": 72,
+                "src": "126:10:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 64,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "126:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 67,
+                "name": "time",
+                "nodeType": "VariableDeclaration",
+                "scope": 72,
+                "src": "189:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 66,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "189:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 69,
+                "name": "seat",
+                "nodeType": "VariableDeclaration",
+                "scope": 72,
+                "src": "252:9:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Seat_$77_storage_ptr",
+                  "typeString": "struct TransferTrade.Seat"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 68,
+                  "name": "Seat",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 77,
+                  "src": "252:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Seat_$77_storage_ptr",
+                    "typeString": "struct TransferTrade.Seat"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 71,
+                "name": "ticketPrice",
+                "nodeType": "VariableDeclaration",
+                "scope": 72,
+                "src": "272:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 70,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "272:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "TicketInfo",
+            "nodeType": "StructDefinition",
+            "scope": 117,
+            "src": "68:230:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "TransferTrade.Seat",
+            "id": 77,
+            "members": [
+              {
+                "constant": false,
+                "id": 74,
+                "name": "typeOfSeat",
+                "nodeType": "VariableDeclaration",
+                "scope": 77,
+                "src": "329:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 73,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "329:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 76,
+                "name": "seatNumber",
+                "nodeType": "VariableDeclaration",
+                "scope": 77,
+                "src": "357:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint32",
+                  "typeString": "uint32"
+                },
+                "typeName": {
+                  "id": 75,
+                  "name": "uint32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "357:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Seat",
+            "nodeType": "StructDefinition",
+            "scope": 117,
+            "src": "306:76:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 83,
+            "name": "defaultSeat",
+            "nodeType": "VariableDeclaration",
+            "scope": 117,
+            "src": "390:41:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Seat_$77_storage",
+              "typeString": "struct TransferTrade.Seat"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 78,
+              "name": "Seat",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 77,
+              "src": "390:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Seat_$77_storage_ptr",
+                "typeString": "struct TransferTrade.Seat"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "564950",
+                  "id": 80,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "421:5:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_0be16c3d305ec7d41a84ef1c316dafecec9c66a4af3a4191537013c2472eb4d2",
+                    "typeString": "literal_string \"VIP\""
+                  },
+                  "value": "VIP"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "3330",
+                  "id": 81,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "428:2:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_30_by_1",
+                    "typeString": "int_const 30"
+                  },
+                  "value": "30"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_0be16c3d305ec7d41a84ef1c316dafecec9c66a4af3a4191537013c2472eb4d2",
+                    "typeString": "literal_string \"VIP\""
+                  },
+                  {
+                    "typeIdentifier": "t_rational_30_by_1",
+                    "typeString": "int_const 30"
+                  }
+                ],
+                "id": 79,
+                "name": "Seat",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 77,
+                "src": "416:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_struct$_Seat_$77_storage_ptr_$",
+                  "typeString": "type(struct TransferTrade.Seat storage pointer)"
+                }
+              },
+              "id": 82,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "structConstructorCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "416:15:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Seat_$77_memory",
+                "typeString": "struct TransferTrade.Seat memory"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 92,
+            "name": "defaultTicket",
+            "nodeType": "VariableDeclaration",
+            "scope": 117,
+            "src": "472:88:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_TicketInfo_$72_storage",
+              "typeString": "struct TransferTrade.TicketInfo"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 84,
+              "name": "TicketInfo",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 72,
+              "src": "472:10:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_TicketInfo_$72_storage_ptr",
+                "typeString": "struct TransferTrade.TicketInfo"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "arguments": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "45584f",
+                  "id": 86,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "510:5:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_896a0b762edb57cf385702536ba0cce85d894198e74dda8231357501417fff46",
+                    "typeString": "literal_string \"EXO\""
+                  },
+                  "value": "EXO"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "323032312d30362d3138",
+                  "id": 87,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "517:12:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_2cd664ed9191cb20ccec0dec975001819f6a2a274703be1c117d7b79a8981976",
+                    "typeString": "literal_string \"2021-06-18\""
+                  },
+                  "value": "2021-06-18"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "31383a3030",
+                  "id": 88,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "string",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "531:7:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_stringliteral_d98a7c12aad7f8125b412a8f224e60c5b91304607bac82293cfb3f11b1de2fbe",
+                    "typeString": "literal_string \"18:00\""
+                  },
+                  "value": "18:00"
+                },
+                {
+                  "argumentTypes": null,
+                  "id": 89,
+                  "name": "defaultSeat",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 83,
+                  "src": "540:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Seat_$77_storage",
+                    "typeString": "struct TransferTrade.Seat storage ref"
+                  }
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "313030303030",
+                  "id": 90,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "553:6:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_100000_by_1",
+                    "typeString": "int_const 100000"
+                  },
+                  "value": "100000"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_stringliteral_896a0b762edb57cf385702536ba0cce85d894198e74dda8231357501417fff46",
+                    "typeString": "literal_string \"EXO\""
+                  },
+                  {
+                    "typeIdentifier": "t_stringliteral_2cd664ed9191cb20ccec0dec975001819f6a2a274703be1c117d7b79a8981976",
+                    "typeString": "literal_string \"2021-06-18\""
+                  },
+                  {
+                    "typeIdentifier": "t_stringliteral_d98a7c12aad7f8125b412a8f224e60c5b91304607bac82293cfb3f11b1de2fbe",
+                    "typeString": "literal_string \"18:00\""
+                  },
+                  {
+                    "typeIdentifier": "t_struct$_Seat_$77_storage",
+                    "typeString": "struct TransferTrade.Seat storage ref"
+                  },
+                  {
+                    "typeIdentifier": "t_rational_100000_by_1",
+                    "typeString": "int_const 100000"
+                  }
+                ],
+                "id": 85,
+                "name": "TicketInfo",
+                "nodeType": "Identifier",
+                "overloadedDeclarations": [],
+                "referencedDeclaration": 72,
+                "src": "499:10:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_struct$_TicketInfo_$72_storage_ptr_$",
+                  "typeString": "type(struct TransferTrade.TicketInfo storage pointer)"
+                }
+              },
+              "id": 91,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": false,
+              "kind": "structConstructorCall",
+              "lValueRequested": false,
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "499:61:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_TicketInfo_$72_memory",
+                "typeString": "struct TransferTrade.TicketInfo memory"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 95,
+              "nodeType": "Block",
+              "src": "683:103:2",
+              "statements": []
+            },
+            "documentation": "@dev 양도 신청 처리 함수",
+            "id": 96,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferApplication",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 93,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "673:2:2"
+            },
+            "returnParameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "683:0:2"
+            },
+            "scope": 117,
+            "src": "645:141:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 99,
+              "nodeType": "Block",
+              "src": "906:10:2",
+              "statements": []
+            },
+            "documentation": "@dev 이미 거래중인 티켓인 경우",
+            "id": 100,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "alreadyTransferringTicket",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "894:2:2"
+            },
+            "returnParameters": {
+              "id": 98,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "906:0:2"
+            },
+            "scope": 117,
+            "src": "860:56:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "1058:10:2",
+              "statements": []
+            },
+            "documentation": "@dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.",
+            "id": 104,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pay",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1046:2:2"
+            },
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1058:0:2"
+            },
+            "scope": 117,
+            "src": "1033:35:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 107,
+              "nodeType": "Block",
+              "src": "1199:10:2",
+              "statements": []
+            },
+            "documentation": "@dev 양도거래가 끝난 티켓의 정보를 수정한다.",
+            "id": 108,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "changeTicketInfo",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 105,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1187:2:2"
+            },
+            "returnParameters": {
+              "id": 106,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1199:0:2"
+            },
+            "scope": 117,
+            "src": "1162:47:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 111,
+              "nodeType": "Block",
+              "src": "1360:10:2",
+              "statements": []
+            },
+            "documentation": "@dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.",
+            "id": 112,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMyTransferringTicket",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 109,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1350:2:2"
+            },
+            "returnParameters": {
+              "id": 110,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1360:0:2"
+            },
+            "scope": 117,
+            "src": "1318:52:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 115,
+              "nodeType": "Block",
+              "src": "1503:10:2",
+              "statements": []
+            },
+            "documentation": "@dev 마이페이지에서 소유하고 있는 티켓을 보여준다.",
+            "id": 116,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMyTicket",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 113,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1493:2:2"
+            },
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1503:0:2"
+            },
+            "scope": 117,
+            "src": "1473:40:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 118,
+        "src": "36:1480:2"
+      }
+    ],
+    "src": "0:1516:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/C/Users/seung/Desktop/학교생활/2021_1/종합설계1/myproject/K-ticket/contracts/TransferTrade.sol",
+      "exportedSymbols": {
+        "TransferTrade": [
+          117
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 61,
+        "name": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            117
+          ],
+          "name": "TransferTrade",
+          "scope": 118
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "TransferTrade.TicketInfo",
+              "name": "TicketInfo",
+              "scope": 117,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "concertName",
+                  "scope": 72,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 62,
+                    "name": "ElementaryTypeName",
+                    "src": "97:6:2"
+                  }
+                ],
+                "id": 63,
+                "name": "VariableDeclaration",
+                "src": "97:18:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "day",
+                  "scope": 72,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 64,
+                    "name": "ElementaryTypeName",
+                    "src": "126:6:2"
+                  }
+                ],
+                "id": 65,
+                "name": "VariableDeclaration",
+                "src": "126:10:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "time",
+                  "scope": 72,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 66,
+                    "name": "ElementaryTypeName",
+                    "src": "189:6:2"
+                  }
+                ],
+                "id": 67,
+                "name": "VariableDeclaration",
+                "src": "189:11:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "seat",
+                  "scope": 72,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "struct TransferTrade.Seat",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Seat",
+                      "referencedDeclaration": 77,
+                      "type": "struct TransferTrade.Seat"
+                    },
+                    "id": 68,
+                    "name": "UserDefinedTypeName",
+                    "src": "252:4:2"
+                  }
+                ],
+                "id": 69,
+                "name": "VariableDeclaration",
+                "src": "252:9:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "ticketPrice",
+                  "scope": 72,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint32",
+                      "type": "uint32"
+                    },
+                    "id": 70,
+                    "name": "ElementaryTypeName",
+                    "src": "272:6:2"
+                  }
+                ],
+                "id": 71,
+                "name": "VariableDeclaration",
+                "src": "272:18:2"
+              }
+            ],
+            "id": 72,
+            "name": "StructDefinition",
+            "src": "68:230:2"
+          },
+          {
+            "attributes": {
+              "canonicalName": "TransferTrade.Seat",
+              "name": "Seat",
+              "scope": 117,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "typeOfSeat",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 73,
+                    "name": "ElementaryTypeName",
+                    "src": "329:6:2"
+                  }
+                ],
+                "id": 74,
+                "name": "VariableDeclaration",
+                "src": "329:17:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "seatNumber",
+                  "scope": 77,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint32",
+                      "type": "uint32"
+                    },
+                    "id": 75,
+                    "name": "ElementaryTypeName",
+                    "src": "357:6:2"
+                  }
+                ],
+                "id": 76,
+                "name": "VariableDeclaration",
+                "src": "357:17:2"
+              }
+            ],
+            "id": 77,
+            "name": "StructDefinition",
+            "src": "306:76:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "defaultSeat",
+              "scope": 117,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct TransferTrade.Seat",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Seat",
+                  "referencedDeclaration": 77,
+                  "type": "struct TransferTrade.Seat"
+                },
+                "id": 78,
+                "name": "UserDefinedTypeName",
+                "src": "390:4:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "isStructConstructorCall": true,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "type": "struct TransferTrade.Seat memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_0be16c3d305ec7d41a84ef1c316dafecec9c66a4af3a4191537013c2472eb4d2",
+                          "typeString": "literal_string \"VIP\""
+                        },
+                        {
+                          "typeIdentifier": "t_rational_30_by_1",
+                          "typeString": "int_const 30"
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 77,
+                      "type": "type(struct TransferTrade.Seat storage pointer)",
+                      "value": "Seat"
+                    },
+                    "id": 79,
+                    "name": "Identifier",
+                    "src": "416:4:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "564950",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"VIP\"",
+                      "value": "VIP"
+                    },
+                    "id": 80,
+                    "name": "Literal",
+                    "src": "421:5:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "3330",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 30",
+                      "value": "30"
+                    },
+                    "id": 81,
+                    "name": "Literal",
+                    "src": "428:2:2"
+                  }
+                ],
+                "id": 82,
+                "name": "FunctionCall",
+                "src": "416:15:2"
+              }
+            ],
+            "id": 83,
+            "name": "VariableDeclaration",
+            "src": "390:41:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "defaultTicket",
+              "scope": 117,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct TransferTrade.TicketInfo",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "TicketInfo",
+                  "referencedDeclaration": 72,
+                  "type": "struct TransferTrade.TicketInfo"
+                },
+                "id": 84,
+                "name": "UserDefinedTypeName",
+                "src": "472:10:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "isStructConstructorCall": true,
+                  "lValueRequested": false,
+                  "names": [
+                    null
+                  ],
+                  "type": "struct TransferTrade.TicketInfo memory",
+                  "type_conversion": false
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_896a0b762edb57cf385702536ba0cce85d894198e74dda8231357501417fff46",
+                          "typeString": "literal_string \"EXO\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_2cd664ed9191cb20ccec0dec975001819f6a2a274703be1c117d7b79a8981976",
+                          "typeString": "literal_string \"2021-06-18\""
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d98a7c12aad7f8125b412a8f224e60c5b91304607bac82293cfb3f11b1de2fbe",
+                          "typeString": "literal_string \"18:00\""
+                        },
+                        {
+                          "typeIdentifier": "t_struct$_Seat_$77_storage",
+                          "typeString": "struct TransferTrade.Seat storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_rational_100000_by_1",
+                          "typeString": "int_const 100000"
+                        }
+                      ],
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 72,
+                      "type": "type(struct TransferTrade.TicketInfo storage pointer)",
+                      "value": "TicketInfo"
+                    },
+                    "id": 85,
+                    "name": "Identifier",
+                    "src": "499:10:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "45584f",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"EXO\"",
+                      "value": "EXO"
+                    },
+                    "id": 86,
+                    "name": "Literal",
+                    "src": "510:5:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "323032312d30362d3138",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"2021-06-18\"",
+                      "value": "2021-06-18"
+                    },
+                    "id": 87,
+                    "name": "Literal",
+                    "src": "517:12:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "31383a3030",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "string",
+                      "type": "literal_string \"18:00\"",
+                      "value": "18:00"
+                    },
+                    "id": 88,
+                    "name": "Literal",
+                    "src": "531:7:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 83,
+                      "type": "struct TransferTrade.Seat storage ref",
+                      "value": "defaultSeat"
+                    },
+                    "id": 89,
+                    "name": "Identifier",
+                    "src": "540:11:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "313030303030",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 100000",
+                      "value": "100000"
+                    },
+                    "id": 90,
+                    "name": "Literal",
+                    "src": "553:6:2"
+                  }
+                ],
+                "id": 91,
+                "name": "FunctionCall",
+                "src": "499:61:2"
+              }
+            ],
+            "id": 92,
+            "name": "VariableDeclaration",
+            "src": "472:88:2"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev 양도 신청 처리 함수",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "transferApplication",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 93,
+                "name": "ParameterList",
+                "src": "673:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 94,
+                "name": "ParameterList",
+                "src": "683:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 95,
+                "name": "Block",
+                "src": "683:103:2"
+              }
+            ],
+            "id": 96,
+            "name": "FunctionDefinition",
+            "src": "645:141:2"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev 이미 거래중인 티켓인 경우",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "alreadyTransferringTicket",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 97,
+                "name": "ParameterList",
+                "src": "894:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 98,
+                "name": "ParameterList",
+                "src": "906:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 99,
+                "name": "Block",
+                "src": "906:10:2"
+              }
+            ],
+            "id": 100,
+            "name": "FunctionDefinition",
+            "src": "860:56:2"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "pay",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 101,
+                "name": "ParameterList",
+                "src": "1046:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 102,
+                "name": "ParameterList",
+                "src": "1058:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 103,
+                "name": "Block",
+                "src": "1058:10:2"
+              }
+            ],
+            "id": 104,
+            "name": "FunctionDefinition",
+            "src": "1033:35:2"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev 양도거래가 끝난 티켓의 정보를 수정한다.",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "changeTicketInfo",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 105,
+                "name": "ParameterList",
+                "src": "1187:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 106,
+                "name": "ParameterList",
+                "src": "1199:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 107,
+                "name": "Block",
+                "src": "1199:10:2"
+              }
+            ],
+            "id": 108,
+            "name": "FunctionDefinition",
+            "src": "1162:47:2"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getMyTransferringTicket",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 109,
+                "name": "ParameterList",
+                "src": "1350:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 110,
+                "name": "ParameterList",
+                "src": "1360:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 111,
+                "name": "Block",
+                "src": "1360:10:2"
+              }
+            ],
+            "id": 112,
+            "name": "FunctionDefinition",
+            "src": "1318:52:2"
+          },
+          {
+            "attributes": {
+              "documentation": "@dev 마이페이지에서 소유하고 있는 티켓을 보여준다.",
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getMyTicket",
+              "scope": 117,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 113,
+                "name": "ParameterList",
+                "src": "1493:2:2"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 114,
+                "name": "ParameterList",
+                "src": "1503:0:2"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 115,
+                "name": "Block",
+                "src": "1503:10:2"
+              }
+            ],
+            "id": 116,
+            "name": "FunctionDefinition",
+            "src": "1473:40:2"
+          }
+        ],
+        "id": 117,
+        "name": "ContractDefinition",
+        "src": "36:1480:2"
+      }
+    ],
+    "id": 118,
+    "name": "SourceUnit",
+    "src": "0:1516:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.3",
+  "updatedAt": "2021-05-24T11:00:58.121Z",
+  "devdoc": {
+    "methods": {
+      "getMyTicket()": {
+        "details": "마이페이지에서 소유하고 있는 티켓을 보여준다."
+      },
+      "getMyTransferringTicket()": {
+        "details": "마이페이지에서 진행중인 양도거래 티켓을 보여준다."
+      },
+      "transferApplication()": {
+        "details": "양도 신청 처리 함수"
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
