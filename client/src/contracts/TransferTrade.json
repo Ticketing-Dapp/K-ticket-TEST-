@@ -2,6 +2,98 @@
   "contractName": "TransferTrade",
   "abi": [
     {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "concertName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "day",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "time",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "typeOfSeat",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "seatNumber",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "ticketPrice",
+          "type": "uint32"
+        }
+      ],
+      "name": "GetMyTicket",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "concertName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "day",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "time",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "typeOfSeat",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "seatNumber",
+          "type": "uint32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint32",
+          "name": "ticketPrice",
+          "type": "uint32"
+        }
+      ],
+      "name": "GetMyTransferringTicket",
+      "type": "event"
+    },
+    {
       "constant": true,
       "inputs": [],
       "name": "defaultSeat",
@@ -22,52 +114,49 @@
       "type": "function"
     },
     {
-      "constant": false,
+      "constant": true,
+      "inputs": [],
+      "name": "transferee",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
       "inputs": [],
       "name": "transferApplication",
       "outputs": [],
       "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "getMyTransferringTicket",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [],
-      "name": "getMyTicket",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
+      "stateMutability": "view",
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"defaultSeat\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"typeOfSeat\",\"type\":\"string\"},{\"internalType\":\"uint32\",\"name\":\"seatNumber\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getMyTicket\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"getMyTransferringTicket\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"transferApplication\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"getMyTicket()\":{\"details\":\"\\ub9c8\\uc774\\ud398\\uc774\\uc9c0\\uc5d0\\uc11c \\uc18c\\uc720\\ud558\\uace0 \\uc788\\ub294 \\ud2f0\\ucf13\\uc744 \\ubcf4\\uc5ec\\uc900\\ub2e4.\"},\"getMyTransferringTicket()\":{\"details\":\"\\ub9c8\\uc774\\ud398\\uc774\\uc9c0\\uc5d0\\uc11c \\uc9c4\\ud589\\uc911\\uc778 \\uc591\\ub3c4\\uac70\\ub798 \\ud2f0\\ucf13\\uc744 \\ubcf4\\uc5ec\\uc900\\ub2e4.\"},\"transferApplication()\":{\"details\":\"\\uc591\\ub3c4 \\uc2e0\\uccad \\ucc98\\ub9ac \\ud568\\uc218\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/seung/Desktop/\\ud559\\uad50\\uc0dd\\ud65c/2021_1/\\uc885\\ud569\\uc124\\uacc41/myproject/K-ticket/contracts/TransferTrade.sol\":\"TransferTrade\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/seung/Desktop/\\ud559\\uad50\\uc0dd\\ud65c/2021_1/\\uc885\\ud569\\uc124\\uacc41/myproject/K-ticket/contracts/TransferTrade.sol\":{\"keccak256\":\"0x1ef9c669508eb67680f7dd911192305b365072a716811df221f61ba16022773c\",\"urls\":[\"bzz-raw://592d1fabfb4779231c517befa9b9a15c54422d69e31992c6636602b357d7612d\",\"dweb:/ipfs/QmZvVvW94irydNhDQqBqZX1adm78sQuAHwkX17AqNXGsFQ\"]}},\"version\":1}",
-  "bytecode": "0x608060405260405180604001604052806040518060400160405280600381526020017f56495000000000000000000000000000000000000000000000000000000000008152508152602001601e63ffffffff16815250600080820151816000019080519060200190610072929190610322565b5060208201518160010160006101000a81548163ffffffff021916908363ffffffff16021790555050506040518060a001604052806040518060400160405280600381526020017f45584f000000000000000000000000000000000000000000000000000000000081525081526020016040518060400160405280600a81526020017f323032312d30362d31380000000000000000000000000000000000000000000081525081526020016040518060400160405280600581526020017f31383a303000000000000000000000000000000000000000000000000000000081525081526020016000604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101fe5780601f106101d3576101008083540402835291602001916101fe565b820191906000526020600020905b8154815290600101906020018083116101e157829003601f168201915b505050505081526020016001820160009054906101000a900463ffffffff1663ffffffff1663ffffffff16815250508152602001620186a063ffffffff168152506002600082015181600001908051906020019061025d929190610322565b50602082015181600101908051906020019061027a929190610322565b506040820151816002019080519060200190610297929190610322565b5060608201518160030160008201518160000190805190602001906102bd929190610322565b5060208201518160010160006101000a81548163ffffffff021916908363ffffffff160217905550505060808201518160050160006101000a81548163ffffffff021916908363ffffffff160217905550505034801561031c57600080fd5b506103c7565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061036357805160ff1916838001178555610391565b82800160010185558215610391579182015b82811115610390578251825591602001919060010190610375565b5b50905061039e91906103a2565b5090565b6103c491905b808211156103c05760008160009055506001016103a8565b5090565b90565b6101fa806103d66000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063330854fc146100515780633f7daf811461005b57806391ad15ca14610065578063ee185f73146100fb575b600080fd5b610059610105565b005b610063610107565b005b61006d610109565b60405180806020018363ffffffff1663ffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156100bf5780820151818401526020810190506100a4565b50505050905090810190601f1680156100ec5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101036101c3565b005b565b565b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101a35780601f10610178576101008083540402835291602001916101a3565b820191906000526020600020905b81548152906001019060200180831161018657829003601f168201915b5050505050908060010160009054906101000a900463ffffffff16905082565b56fea265627a7a723158205d76db87d1c27647fd1ae7cefe04c21245ac63bf3985ed70a0941b19c22711ab64736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063330854fc146100515780633f7daf811461005b57806391ad15ca14610065578063ee185f73146100fb575b600080fd5b610059610105565b005b610063610107565b005b61006d610109565b60405180806020018363ffffffff1663ffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156100bf5780820151818401526020810190506100a4565b50505050905090810190601f1680156100ec5780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b6101036101c3565b005b565b565b6000806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101a35780601f10610178576101008083540402835291602001916101a3565b820191906000526020600020905b81548152906001019060200180831161018657829003601f168201915b5050505050908060010160009054906101000a900463ffffffff16905082565b56fea265627a7a723158205d76db87d1c27647fd1ae7cefe04c21245ac63bf3985ed70a0941b19c22711ab64736f6c63430005100032",
-  "sourceMap": "36:1480:2:-;;;416:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;428:2;416:15;;;;;390:41;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;499:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;540:11;499:61;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;553:6;499:61;;;;;472:88;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;36:1480;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:1480:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "36:1480:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:1480:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;645:141;;;:::i;:::-;;1473:40;;;:::i;:::-;;390:41;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;390:41:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1318:52;;;:::i;:::-;;645:141;:::o;1473:40::-;:::o;390:41::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1318:52::-;:::o",
-  "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract TransferTrade {\r\n\r\n    struct TicketInfo {\r\n        string concertName;\r\n        string day;   // 나중에 타입 다시 생각하기\r\n        string time;  // 나중에 타입 다시 생각하기\r\n        Seat seat;\r\n        uint32 ticketPrice;\r\n    }\r\n\r\n    struct Seat {\r\n        string typeOfSeat;\r\n        uint32 seatNumber;\r\n    }\r\n\r\n    Seat public defaultSeat = Seat(\"VIP\", 30);\r\n    // 디폴트 티켓 생성\r\n\r\n    TicketInfo defaultTicket = TicketInfo(\"EXO\", \"2021-06-18\", \"18:00\", defaultSeat, 100000);\r\n\r\n\r\n    // 변수\r\n\r\n    /**\r\n    * @dev 양도 신청 처리 함수\r\n    */\r\n    function transferApplication() public {\r\n        // alreadyTransferringTicket을 확인\r\n        // pay\r\n        // changeTicketInfo\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 이미 거래중인 티켓인 경우\r\n    */\r\n    function alreadyTransferringTicket() internal {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.\r\n    */\r\n    function  pay() internal {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 양도거래가 끝난 티켓의 정보를 수정한다.\r\n    */\r\n    function changeTicketInfo() internal {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.\r\n    */\r\n    function getMyTransferringTicket() public {\r\n\r\n    }\r\n\r\n    /**\r\n    * @dev 마이페이지에서 소유하고 있는 티켓을 보여준다.\r\n    */\r\n    function getMyTicket() public {\r\n\r\n    }\r\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"concertName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"day\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"time\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"typeOfSeat\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"seatNumber\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"ticketPrice\",\"type\":\"uint32\"}],\"name\":\"GetMyTicket\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"concertName\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"day\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"time\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"typeOfSeat\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"seatNumber\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"ticketPrice\",\"type\":\"uint32\"}],\"name\":\"GetMyTransferringTicket\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"defaultSeat\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"typeOfSeat\",\"type\":\"string\"},{\"internalType\":\"uint32\",\"name\":\"seatNumber\",\"type\":\"uint32\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"transferApplication\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"transferee\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"transferApplication()\":{\"details\":\"\\uc591\\ub3c4 \\uc2e0\\uccad \\ucc98\\ub9ac \\ud568\\uc218\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/seung/Desktop/\\ud559\\uad50\\uc0dd\\ud65c/2021_1/\\uc885\\ud569\\uc124\\uacc41/myproject/K-ticket/contracts/TransferTrade.sol\":\"TransferTrade\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/seung/Desktop/\\ud559\\uad50\\uc0dd\\ud65c/2021_1/\\uc885\\ud569\\uc124\\uacc41/myproject/K-ticket/contracts/TransferTrade.sol\":{\"keccak256\":\"0xd5da8cd8987df3197cb9337a493f3585889500420c0f5d97ef3e045ff12b5699\",\"urls\":[\"bzz-raw://d9ffe149b00e17902307fd47c257c36166e265ab378421160da343381d783b94\",\"dweb:/ipfs/QmWQ64SmK1z8pMeAdMTteETjGBntx6bQPdqj2rxZXbownh\"]}},\"version\":1}",
+  "bytecode": "0x608060405260405180604001604052806040518060400160405280600381526020017f56495000000000000000000000000000000000000000000000000000000000008152508152602001601e63ffffffff1681525060008082015181600001908051906020019061007292919061038c565b5060208201518160010160006101000a81548163ffffffff021916908363ffffffff16021790555050506040518060c001604052806040518060400160405280600381526020017f45584f000000000000000000000000000000000000000000000000000000000081525081526020016040518060400160405280600a81526020017f323032312d30362d31380000000000000000000000000000000000000000000081525081526020016040518060400160405280600581526020017f31383a303000000000000000000000000000000000000000000000000000000081525081526020016000604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101fe5780601f106101d3576101008083540402835291602001916101fe565b820191906000526020600020905b8154815290600101906020018083116101e157829003601f168201915b505050505081526020016001820160009054906101000a900463ffffffff1663ffffffff1663ffffffff16815250508152602001620186a063ffffffff168152602001600015158152506002600082015181600001908051906020019061026692919061038c565b50602082015181600101908051906020019061028392919061038c565b5060408201518160020190805190602001906102a092919061038c565b5060608201518160030160008201518160000190805190602001906102c692919061038c565b5060208201518160010160006101000a81548163ffffffff021916908363ffffffff160217905550505060808201518160050160006101000a81548163ffffffff021916908363ffffffff16021790555060a08201518160050160046101000a81548160ff021916908315150217905550505034801561034557600080fd5b5033600860006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610431565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103cd57805160ff19168380011785556103fb565b828001600101855582156103fb579182015b828111156103fa5782518255916020019190600101906103df565b5b509050610408919061040c565b5090565b61042e91905b8082111561042a576000816000905550600101610412565b5090565b90565b6102e7806104406000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c8063330854fc146100465780638cabe7d01461005057806391ad15ca1461009a575b600080fd5b61004e610130565b005b6100586101ce565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100a26101f4565b60405180806020018363ffffffff1663ffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156100f45780820151818401526020810190506100d9565b50505050905090810190601f1680156101215780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60001515600260050160049054906101000a900460ff161515146101bc576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601d8152602001807f416c7265616479207469636b6574206973207472616e7366657272656400000081525060200191505060405180910390fd5b6101c46102ae565b6101cc6102b0565b565b600860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561028e5780601f106102635761010080835404028352916020019161028e565b820191906000526020600020905b81548152906001019060200180831161027157829003601f168201915b5050505050908060010160009054906101000a900463ffffffff16905082565b565b56fea265627a7a72315820abe9e98673f339f73d9f21a9cc899f05ee60ffd659bb37c309139fe5745046cf64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c8063330854fc146100465780638cabe7d01461005057806391ad15ca1461009a575b600080fd5b61004e610130565b005b6100586101ce565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100a26101f4565b60405180806020018363ffffffff1663ffffffff168152602001828103825284818151815260200191508051906020019080838360005b838110156100f45780820151818401526020810190506100d9565b50505050905090810190601f1680156101215780820380516001836020036101000a031916815260200191505b50935050505060405180910390f35b60001515600260050160049054906101000a900460ff161515146101bc576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040180806020018281038252601d8152602001807f416c7265616479207469636b6574206973207472616e7366657272656400000081525060200191505060405180910390fd5b6101c46102ae565b6101cc6102b0565b565b600860009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000806000018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561028e5780601f106102635761010080835404028352916020019161028e565b820191906000526020600020905b81548152906001019060200180831161027157829003601f168201915b5050505050908060010160009054906101000a900463ffffffff16905082565b565b56fea265627a7a72315820abe9e98673f339f73d9f21a9cc899f05ee60ffd659bb37c309139fe5745046cf64736f6c63430005100032",
+  "sourceMap": "36:2699:0:-;;;512:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;524:2;512:15;;;;;486:41;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;561:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;602:11;561:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;615:6;561:68;;;;;;623:5;561:68;;;;;534:95;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1078:63;8:9:-1;5:2;;;30:1;27;20:12;5:2;1078:63:0;1123:10;1110;;:23;;;;;;;;;;;;;;;;;;36:2699;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "36:2699:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:2699:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1206:377;;;:::i;:::-;;730:33;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;486:41;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;486:41:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1206:377;1442:5;1411:36;;:13;:27;;;;;;;;;;;;:36;;;1403:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1510:5;:3;:5::i;:::-;1557:18;:16;:18::i;:::-;1206:377::o;730:33::-;;;;;;;;;;;;;:::o;486:41::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1878:194::-;:::o;2166:236::-;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract TransferTrade {\r\n\r\n    struct TicketInfo {\r\n        string concertName;\r\n        string day;   // 나중에 타입 다시 생각하기\r\n        string time;  // 나중에 타입 다시 생각하기\r\n        Seat seat;\r\n        uint32 ticketPrice;\r\n        bool isTransferred;\r\n        // address payable owner;\r\n    }\r\n\r\n    struct Seat {\r\n        string typeOfSeat;\r\n        uint32 seatNumber;\r\n    }\r\n\r\n    // 디폴트 티켓 생성\r\n    Seat public defaultSeat = Seat(\"VIP\", 30);\r\n    TicketInfo defaultTicket = TicketInfo(\"EXO\", \"2021-06-18\", \"18:00\", defaultSeat, 100000, false);\r\n\r\n    // 상수\r\n    uint256 constant internal TICKET_PRICE = 5 * 10 ** 15;\r\n\r\n    // 변수\r\n    address payable public transferee;\r\n\r\n    // 이벤트\r\n    event GetMyTransferringTicket(string concertName, string day, string time, string typeOfSeat, uint32 seatNumber, uint32 ticketPrice);\r\n    event GetMyTicket(string concertName, string day, string time, string typeOfSeat, uint32 seatNumber, uint32 ticketPrice);\r\n\r\n\r\n    // 생성자\r\n    constructor() public {\r\n        transferee = msg.sender;\r\n    }\r\n\r\n    /**\r\n    * @dev 양도 신청 처리 함수\r\n    */\r\n    function transferApplication() public view {\r\n        // alreadyTransferringTicket을 확인, 임시로 데모를 위해 require만을 사용하여 거래가 진행중인지 확인한다.\r\n        require(defaultTicket.isTransferred == false, \"Already ticket is transferred\");\r\n\r\n        // pay\r\n        pay();\r\n\r\n        // changeTicketInfo\r\n        changeTicketInfo();\r\n    }\r\n\r\n    /**\r\n    * @dev 이미 거래중인 티켓인 경우\r\n    */\r\n//    function alreadyTransferringTicket() internal returns (bool result){\r\n//        return false;\r\n//    }\r\n\r\n    /**\r\n    * @dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.\r\n    */\r\n    function pay() internal view {\r\n        // 현재 가나슈를 실행중이 아니라서 ticket info의 owner 정보가 없어서 주석처리함\r\n        // owner.transfer(TICKET_PRICE);\r\n    }\r\n\r\n    /**\r\n    * @dev 양도거래가 끝난 티켓의 정보를 수정한다.\r\n    */\r\n    function changeTicketInfo() internal view {\r\n        // owner change\r\n        // 현재 가나슈를 실행중이 아니라서 ticket info의 owner 정보가 없어서 주석처리함\r\n        // defaultTicket.owner = transferee;\r\n    }\r\n\r\n//    /**\r\n//    * @dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.\r\n//    */\r\n//    function getMyTransferringTicket() public {\r\n//\r\n//    }\r\n//\r\n//    /**\r\n//    * @dev 마이페이지에서 소유하고 있는 티켓을 보여준다.\r\n//    */\r\n//    function getMyTicket() public {\r\n//\r\n//    }\r\n}",
   "sourcePath": "C:/Users/seung/Desktop/학교생활/2021_1/종합설계1/myproject/K-ticket/contracts/TransferTrade.sol",
   "ast": {
     "absolutePath": "/C/Users/seung/Desktop/학교생활/2021_1/종합설계1/myproject/K-ticket/contracts/TransferTrade.sol",
     "exportedSymbols": {
       "TransferTrade": [
-        117
+        108
       ]
     },
-    "id": 118,
+    "id": 109,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 61,
+        "id": 1,
         "literals": [
           "solidity",
           ">=",
@@ -78,7 +167,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:32:2"
+        "src": "0:32:0"
       },
       {
         "baseContracts": [],
@@ -86,24 +175,24 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 117,
+        "id": 108,
         "linearizedBaseContracts": [
-          117
+          108
         ],
         "name": "TransferTrade",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "TransferTrade.TicketInfo",
-            "id": 72,
+            "id": 14,
             "members": [
               {
                 "constant": false,
-                "id": 63,
+                "id": 3,
                 "name": "concertName",
                 "nodeType": "VariableDeclaration",
-                "scope": 72,
-                "src": "97:18:2",
+                "scope": 14,
+                "src": "97:18:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -111,10 +200,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 62,
+                  "id": 2,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "97:6:2",
+                  "src": "97:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -125,11 +214,11 @@
               },
               {
                 "constant": false,
-                "id": 65,
+                "id": 5,
                 "name": "day",
                 "nodeType": "VariableDeclaration",
-                "scope": 72,
-                "src": "126:10:2",
+                "scope": 14,
+                "src": "126:10:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -137,10 +226,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 64,
+                  "id": 4,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "126:6:2",
+                  "src": "126:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -151,11 +240,11 @@
               },
               {
                 "constant": false,
-                "id": 67,
+                "id": 7,
                 "name": "time",
                 "nodeType": "VariableDeclaration",
-                "scope": 72,
-                "src": "189:11:2",
+                "scope": 14,
+                "src": "189:11:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -163,10 +252,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 66,
+                  "id": 6,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "189:6:2",
+                  "src": "189:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -177,26 +266,26 @@
               },
               {
                 "constant": false,
-                "id": 69,
+                "id": 9,
                 "name": "seat",
                 "nodeType": "VariableDeclaration",
-                "scope": 72,
-                "src": "252:9:2",
+                "scope": 14,
+                "src": "252:9:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Seat_$77_storage_ptr",
+                  "typeIdentifier": "t_struct$_Seat_$19_storage_ptr",
                   "typeString": "struct TransferTrade.Seat"
                 },
                 "typeName": {
                   "contractScope": null,
-                  "id": 68,
+                  "id": 8,
                   "name": "Seat",
                   "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 77,
-                  "src": "252:4:2",
+                  "referencedDeclaration": 19,
+                  "src": "252:4:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Seat_$77_storage_ptr",
+                    "typeIdentifier": "t_struct$_Seat_$19_storage_ptr",
                     "typeString": "struct TransferTrade.Seat"
                   }
                 },
@@ -205,11 +294,11 @@
               },
               {
                 "constant": false,
-                "id": 71,
+                "id": 11,
                 "name": "ticketPrice",
                 "nodeType": "VariableDeclaration",
-                "scope": 72,
-                "src": "272:18:2",
+                "scope": 14,
+                "src": "272:18:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -217,13 +306,39 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 70,
+                  "id": 10,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "272:6:2",
+                  "src": "272:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint32",
                     "typeString": "uint32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 13,
+                "name": "isTransferred",
+                "nodeType": "VariableDeclaration",
+                "scope": 14,
+                "src": "301:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 12,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
                   }
                 },
                 "value": null,
@@ -232,21 +347,21 @@
             ],
             "name": "TicketInfo",
             "nodeType": "StructDefinition",
-            "scope": 117,
-            "src": "68:230:2",
+            "scope": 108,
+            "src": "68:294:0",
             "visibility": "public"
           },
           {
             "canonicalName": "TransferTrade.Seat",
-            "id": 77,
+            "id": 19,
             "members": [
               {
                 "constant": false,
-                "id": 74,
+                "id": 16,
                 "name": "typeOfSeat",
                 "nodeType": "VariableDeclaration",
-                "scope": 77,
-                "src": "329:17:2",
+                "scope": 19,
+                "src": "393:17:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -254,10 +369,10 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 73,
+                  "id": 15,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
-                  "src": "329:6:2",
+                  "src": "393:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string"
@@ -268,11 +383,11 @@
               },
               {
                 "constant": false,
-                "id": 76,
+                "id": 18,
                 "name": "seatNumber",
                 "nodeType": "VariableDeclaration",
-                "scope": 77,
-                "src": "357:17:2",
+                "scope": 19,
+                "src": "421:17:0",
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -280,10 +395,10 @@
                   "typeString": "uint32"
                 },
                 "typeName": {
-                  "id": 75,
+                  "id": 17,
                   "name": "uint32",
                   "nodeType": "ElementaryTypeName",
-                  "src": "357:6:2",
+                  "src": "421:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint32",
                     "typeString": "uint32"
@@ -295,32 +410,32 @@
             ],
             "name": "Seat",
             "nodeType": "StructDefinition",
-            "scope": 117,
-            "src": "306:76:2",
+            "scope": 108,
+            "src": "370:76:0",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 83,
+            "id": 25,
             "name": "defaultSeat",
             "nodeType": "VariableDeclaration",
-            "scope": 117,
-            "src": "390:41:2",
+            "scope": 108,
+            "src": "486:41:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_Seat_$77_storage",
+              "typeIdentifier": "t_struct$_Seat_$19_storage",
               "typeString": "struct TransferTrade.Seat"
             },
             "typeName": {
               "contractScope": null,
-              "id": 78,
+              "id": 20,
               "name": "Seat",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 77,
-              "src": "390:4:2",
+              "referencedDeclaration": 19,
+              "src": "486:4:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Seat_$77_storage_ptr",
+                "typeIdentifier": "t_struct$_Seat_$19_storage_ptr",
                 "typeString": "struct TransferTrade.Seat"
               }
             },
@@ -330,14 +445,14 @@
                 {
                   "argumentTypes": null,
                   "hexValue": "564950",
-                  "id": 80,
+                  "id": 22,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "kind": "string",
                   "lValueRequested": false,
                   "nodeType": "Literal",
-                  "src": "421:5:2",
+                  "src": "517:5:0",
                   "subdenomination": null,
                   "typeDescriptions": {
                     "typeIdentifier": "t_stringliteral_0be16c3d305ec7d41a84ef1c316dafecec9c66a4af3a4191537013c2472eb4d2",
@@ -348,14 +463,14 @@
                 {
                   "argumentTypes": null,
                   "hexValue": "3330",
-                  "id": 81,
+                  "id": 23,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "kind": "number",
                   "lValueRequested": false,
                   "nodeType": "Literal",
-                  "src": "428:2:2",
+                  "src": "524:2:0",
                   "subdenomination": null,
                   "typeDescriptions": {
                     "typeIdentifier": "t_rational_30_by_1",
@@ -375,18 +490,18 @@
                     "typeString": "int_const 30"
                   }
                 ],
-                "id": 79,
+                "id": 21,
                 "name": "Seat",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 77,
-                "src": "416:4:2",
+                "referencedDeclaration": 19,
+                "src": "512:4:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_struct$_Seat_$77_storage_ptr_$",
+                  "typeIdentifier": "t_type$_t_struct$_Seat_$19_storage_ptr_$",
                   "typeString": "type(struct TransferTrade.Seat storage pointer)"
                 }
               },
-              "id": 82,
+              "id": 24,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -394,9 +509,9 @@
               "lValueRequested": false,
               "names": [],
               "nodeType": "FunctionCall",
-              "src": "416:15:2",
+              "src": "512:15:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_Seat_$77_memory",
+                "typeIdentifier": "t_struct$_Seat_$19_memory",
                 "typeString": "struct TransferTrade.Seat memory"
               }
             },
@@ -404,26 +519,26 @@
           },
           {
             "constant": false,
-            "id": 92,
+            "id": 35,
             "name": "defaultTicket",
             "nodeType": "VariableDeclaration",
-            "scope": 117,
-            "src": "472:88:2",
+            "scope": 108,
+            "src": "534:95:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_struct$_TicketInfo_$72_storage",
+              "typeIdentifier": "t_struct$_TicketInfo_$14_storage",
               "typeString": "struct TransferTrade.TicketInfo"
             },
             "typeName": {
               "contractScope": null,
-              "id": 84,
+              "id": 26,
               "name": "TicketInfo",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 72,
-              "src": "472:10:2",
+              "referencedDeclaration": 14,
+              "src": "534:10:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_TicketInfo_$72_storage_ptr",
+                "typeIdentifier": "t_struct$_TicketInfo_$14_storage_ptr",
                 "typeString": "struct TransferTrade.TicketInfo"
               }
             },
@@ -433,14 +548,14 @@
                 {
                   "argumentTypes": null,
                   "hexValue": "45584f",
-                  "id": 86,
+                  "id": 28,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "kind": "string",
                   "lValueRequested": false,
                   "nodeType": "Literal",
-                  "src": "510:5:2",
+                  "src": "572:5:0",
                   "subdenomination": null,
                   "typeDescriptions": {
                     "typeIdentifier": "t_stringliteral_896a0b762edb57cf385702536ba0cce85d894198e74dda8231357501417fff46",
@@ -451,14 +566,14 @@
                 {
                   "argumentTypes": null,
                   "hexValue": "323032312d30362d3138",
-                  "id": 87,
+                  "id": 29,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "kind": "string",
                   "lValueRequested": false,
                   "nodeType": "Literal",
-                  "src": "517:12:2",
+                  "src": "579:12:0",
                   "subdenomination": null,
                   "typeDescriptions": {
                     "typeIdentifier": "t_stringliteral_2cd664ed9191cb20ccec0dec975001819f6a2a274703be1c117d7b79a8981976",
@@ -469,14 +584,14 @@
                 {
                   "argumentTypes": null,
                   "hexValue": "31383a3030",
-                  "id": 88,
+                  "id": 30,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "kind": "string",
                   "lValueRequested": false,
                   "nodeType": "Literal",
-                  "src": "531:7:2",
+                  "src": "593:7:0",
                   "subdenomination": null,
                   "typeDescriptions": {
                     "typeIdentifier": "t_stringliteral_d98a7c12aad7f8125b412a8f224e60c5b91304607bac82293cfb3f11b1de2fbe",
@@ -486,34 +601,52 @@
                 },
                 {
                   "argumentTypes": null,
-                  "id": 89,
+                  "id": 31,
                   "name": "defaultSeat",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 83,
-                  "src": "540:11:2",
+                  "referencedDeclaration": 25,
+                  "src": "602:11:0",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Seat_$77_storage",
+                    "typeIdentifier": "t_struct$_Seat_$19_storage",
                     "typeString": "struct TransferTrade.Seat storage ref"
                   }
                 },
                 {
                   "argumentTypes": null,
                   "hexValue": "313030303030",
-                  "id": 90,
+                  "id": 32,
                   "isConstant": false,
                   "isLValue": false,
                   "isPure": true,
                   "kind": "number",
                   "lValueRequested": false,
                   "nodeType": "Literal",
-                  "src": "553:6:2",
+                  "src": "615:6:0",
                   "subdenomination": null,
                   "typeDescriptions": {
                     "typeIdentifier": "t_rational_100000_by_1",
                     "typeString": "int_const 100000"
                   },
                   "value": "100000"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "66616c7365",
+                  "id": 33,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "bool",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "623:5:0",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "value": "false"
                 }
               ],
               "expression": {
@@ -531,26 +664,30 @@
                     "typeString": "literal_string \"18:00\""
                   },
                   {
-                    "typeIdentifier": "t_struct$_Seat_$77_storage",
+                    "typeIdentifier": "t_struct$_Seat_$19_storage",
                     "typeString": "struct TransferTrade.Seat storage ref"
                   },
                   {
                     "typeIdentifier": "t_rational_100000_by_1",
                     "typeString": "int_const 100000"
+                  },
+                  {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
                   }
                 ],
-                "id": 85,
+                "id": 27,
                 "name": "TicketInfo",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 72,
-                "src": "499:10:2",
+                "referencedDeclaration": 14,
+                "src": "561:10:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_struct$_TicketInfo_$72_storage_ptr_$",
+                  "typeIdentifier": "t_type$_t_struct$_TicketInfo_$14_storage_ptr_$",
                   "typeString": "type(struct TransferTrade.TicketInfo storage pointer)"
                 }
               },
-              "id": 91,
+              "id": 34,
               "isConstant": false,
               "isLValue": false,
               "isPure": false,
@@ -558,219 +695,919 @@
               "lValueRequested": false,
               "names": [],
               "nodeType": "FunctionCall",
-              "src": "499:61:2",
+              "src": "561:68:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_TicketInfo_$72_memory",
+                "typeIdentifier": "t_struct$_TicketInfo_$14_memory",
                 "typeString": "struct TransferTrade.TicketInfo memory"
               }
             },
             "visibility": "internal"
           },
           {
+            "constant": true,
+            "id": 42,
+            "name": "TICKET_PRICE",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "653:53:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 36,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "653:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "commonType": {
+                "typeIdentifier": "t_rational_5000000000000000_by_1",
+                "typeString": "int_const 5000000000000000"
+              },
+              "id": 41,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "argumentTypes": null,
+                "hexValue": "35",
+                "id": 37,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "694:1:0",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_5_by_1",
+                  "typeString": "int_const 5"
+                },
+                "value": "5"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "argumentTypes": null,
+                "commonType": {
+                  "typeIdentifier": "t_rational_1000000000000000_by_1",
+                  "typeString": "int_const 1000000000000000"
+                },
+                "id": 40,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "leftExpression": {
+                  "argumentTypes": null,
+                  "hexValue": "3130",
+                  "id": 38,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "698:2:0",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_10_by_1",
+                    "typeString": "int_const 10"
+                  },
+                  "value": "10"
+                },
+                "nodeType": "BinaryOperation",
+                "operator": "**",
+                "rightExpression": {
+                  "argumentTypes": null,
+                  "hexValue": "3135",
+                  "id": 39,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "704:2:0",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_15_by_1",
+                    "typeString": "int_const 15"
+                  },
+                  "value": "15"
+                },
+                "src": "698:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1000000000000000_by_1",
+                  "typeString": "int_const 1000000000000000"
+                }
+              },
+              "src": "694:12:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_5000000000000000_by_1",
+                "typeString": "int_const 5000000000000000"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 44,
+            "name": "transferee",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "730:33:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 43,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "730:15:0",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 58,
+            "name": "GetMyTransferringTicket",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 57,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46,
+                  "indexed": false,
+                  "name": "concertName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "820:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 45,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "820:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48,
+                  "indexed": false,
+                  "name": "day",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "840:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 47,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "840:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50,
+                  "indexed": false,
+                  "name": "time",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "852:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "852:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52,
+                  "indexed": false,
+                  "name": "typeOfSeat",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "865:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "865:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54,
+                  "indexed": false,
+                  "name": "seatNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "884:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "884:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 56,
+                  "indexed": false,
+                  "name": "ticketPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "903:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 55,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "903:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "819:103:0"
+            },
+            "src": "790:133:0"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 72,
+            "name": "GetMyTicket",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 71,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "indexed": false,
+                  "name": "concertName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72,
+                  "src": "947:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "947:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "indexed": false,
+                  "name": "day",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72,
+                  "src": "967:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "indexed": false,
+                  "name": "time",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72,
+                  "src": "979:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "979:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 66,
+                  "indexed": false,
+                  "name": "typeOfSeat",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72,
+                  "src": "992:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 65,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "992:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 68,
+                  "indexed": false,
+                  "name": "seatNumber",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72,
+                  "src": "1011:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 67,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1011:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 70,
+                  "indexed": false,
+                  "name": "ticketPrice",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 72,
+                  "src": "1030:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 69,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1030:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "946:103:0"
+            },
+            "src": "929:121:0"
+          },
+          {
             "body": {
-              "id": 95,
+              "id": 80,
               "nodeType": "Block",
-              "src": "683:103:2",
-              "statements": []
+              "src": "1099:42:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 75,
+                      "name": "transferee",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44,
+                      "src": "1110:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 123,
+                        "src": "1123:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 77,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1123:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "1110:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 79,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1110:23:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 81,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1089:2:0"
+            },
+            "returnParameters": {
+              "id": 74,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1099:0:0"
+            },
+            "scope": 108,
+            "src": "1078:63:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 98,
+              "nodeType": "Block",
+              "src": "1249:334:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 88,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 85,
+                            "name": "defaultTicket",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 35,
+                            "src": "1411:13:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_TicketInfo_$14_storage",
+                              "typeString": "struct TransferTrade.TicketInfo storage ref"
+                            }
+                          },
+                          "id": 86,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "isTransferred",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 13,
+                          "src": "1411:27:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 87,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1442:5:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "src": "1411:36:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "416c7265616479207469636b6574206973207472616e73666572726564",
+                        "id": 89,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1449:31:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_d80a6c77897b485d77fb505a9558a0f2564b275ecd38570a0c822ce003412723",
+                          "typeString": "literal_string \"Already ticket is transferred\""
+                        },
+                        "value": "Already ticket is transferred"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_d80a6c77897b485d77fb505a9558a0f2564b275ecd38570a0c822ce003412723",
+                          "typeString": "literal_string \"Already ticket is transferred\""
+                        }
+                      ],
+                      "id": 84,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        126,
+                        127
+                      ],
+                      "referencedDeclaration": 127,
+                      "src": "1403:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 90,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1403:78:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 91,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1403:78:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 92,
+                      "name": "pay",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 103,
+                      "src": "1510:3:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$__$",
+                        "typeString": "function () view"
+                      }
+                    },
+                    "id": 93,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1510:5:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 94,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1510:5:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 95,
+                      "name": "changeTicketInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 107,
+                      "src": "1557:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$__$",
+                        "typeString": "function () view"
+                      }
+                    },
+                    "id": 96,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1557:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 97,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1557:18:0"
+                }
+              ]
             },
             "documentation": "@dev 양도 신청 처리 함수",
-            "id": 96,
+            "id": 99,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "transferApplication",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 93,
+              "id": 82,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "673:2:2"
+              "src": "1234:2:0"
             },
             "returnParameters": {
-              "id": 94,
+              "id": 83,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "683:0:2"
+              "src": "1249:0:0"
             },
-            "scope": 117,
-            "src": "645:141:2",
-            "stateMutability": "nonpayable",
+            "scope": 108,
+            "src": "1206:377:0",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 99,
+              "id": 102,
               "nodeType": "Block",
-              "src": "906:10:2",
-              "statements": []
-            },
-            "documentation": "@dev 이미 거래중인 티켓인 경우",
-            "id": 100,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "alreadyTransferringTicket",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 97,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "894:2:2"
-            },
-            "returnParameters": {
-              "id": 98,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "906:0:2"
-            },
-            "scope": 117,
-            "src": "860:56:2",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 103,
-              "nodeType": "Block",
-              "src": "1058:10:2",
+              "src": "1907:165:0",
               "statements": []
             },
             "documentation": "@dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.",
-            "id": 104,
+            "id": 103,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "pay",
             "nodeType": "FunctionDefinition",
             "parameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1890:2:0"
+            },
+            "returnParameters": {
               "id": 101,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1046:2:2"
+              "src": "1907:0:0"
             },
-            "returnParameters": {
-              "id": 102,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1058:0:2"
-            },
-            "scope": 117,
-            "src": "1033:35:2",
-            "stateMutability": "nonpayable",
+            "scope": 108,
+            "src": "1878:194:0",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "internal"
           },
           {
             "body": {
-              "id": 107,
+              "id": 106,
               "nodeType": "Block",
-              "src": "1199:10:2",
+              "src": "2208:194:0",
               "statements": []
             },
             "documentation": "@dev 양도거래가 끝난 티켓의 정보를 수정한다.",
-            "id": 108,
+            "id": 107,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "changeTicketInfo",
             "nodeType": "FunctionDefinition",
             "parameters": {
+              "id": 104,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2191:2:0"
+            },
+            "returnParameters": {
               "id": 105,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1187:2:2"
+              "src": "2208:0:0"
             },
-            "returnParameters": {
-              "id": 106,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1199:0:2"
-            },
-            "scope": 117,
-            "src": "1162:47:2",
-            "stateMutability": "nonpayable",
+            "scope": 108,
+            "src": "2166:236:0",
+            "stateMutability": "view",
             "superFunction": null,
             "visibility": "internal"
-          },
-          {
-            "body": {
-              "id": 111,
-              "nodeType": "Block",
-              "src": "1360:10:2",
-              "statements": []
-            },
-            "documentation": "@dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.",
-            "id": 112,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "getMyTransferringTicket",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 109,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1350:2:2"
-            },
-            "returnParameters": {
-              "id": 110,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1360:0:2"
-            },
-            "scope": 117,
-            "src": "1318:52:2",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
-          },
-          {
-            "body": {
-              "id": 115,
-              "nodeType": "Block",
-              "src": "1503:10:2",
-              "statements": []
-            },
-            "documentation": "@dev 마이페이지에서 소유하고 있는 티켓을 보여준다.",
-            "id": 116,
-            "implemented": true,
-            "kind": "function",
-            "modifiers": [],
-            "name": "getMyTicket",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 113,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1493:2:2"
-            },
-            "returnParameters": {
-              "id": 114,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "1503:0:2"
-            },
-            "scope": 117,
-            "src": "1473:40:2",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "public"
           }
         ],
-        "scope": 118,
-        "src": "36:1480:2"
+        "scope": 109,
+        "src": "36:2699:0"
       }
     ],
-    "src": "0:1516:2"
+    "src": "0:2735:0"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/C/Users/seung/Desktop/학교생활/2021_1/종합설계1/myproject/K-ticket/contracts/TransferTrade.sol",
       "exportedSymbols": {
         "TransferTrade": [
-          117
+          108
         ]
       }
     },
@@ -787,9 +1624,9 @@
             ".0"
           ]
         },
-        "id": 61,
+        "id": 1,
         "name": "PragmaDirective",
-        "src": "0:32:2"
+        "src": "0:32:0"
       },
       {
         "attributes": {
@@ -803,17 +1640,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            117
+            108
           ],
           "name": "TransferTrade",
-          "scope": 118
+          "scope": 109
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "TransferTrade.TicketInfo",
               "name": "TicketInfo",
-              "scope": 117,
+              "scope": 108,
               "visibility": "public"
             },
             "children": [
@@ -821,7 +1658,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "concertName",
-                  "scope": 72,
+                  "scope": 14,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -834,20 +1671,20 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 62,
+                    "id": 2,
                     "name": "ElementaryTypeName",
-                    "src": "97:6:2"
+                    "src": "97:6:0"
                   }
                 ],
-                "id": 63,
+                "id": 3,
                 "name": "VariableDeclaration",
-                "src": "97:18:2"
+                "src": "97:18:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "day",
-                  "scope": 72,
+                  "scope": 14,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -860,20 +1697,20 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 64,
+                    "id": 4,
                     "name": "ElementaryTypeName",
-                    "src": "126:6:2"
+                    "src": "126:6:0"
                   }
                 ],
-                "id": 65,
+                "id": 5,
                 "name": "VariableDeclaration",
-                "src": "126:10:2"
+                "src": "126:10:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "time",
-                  "scope": 72,
+                  "scope": 14,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -886,20 +1723,20 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 66,
+                    "id": 6,
                     "name": "ElementaryTypeName",
-                    "src": "189:6:2"
+                    "src": "189:6:0"
                   }
                 ],
-                "id": 67,
+                "id": 7,
                 "name": "VariableDeclaration",
-                "src": "189:11:2"
+                "src": "189:11:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "seat",
-                  "scope": 72,
+                  "scope": 14,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "struct TransferTrade.Seat",
@@ -911,23 +1748,23 @@
                     "attributes": {
                       "contractScope": null,
                       "name": "Seat",
-                      "referencedDeclaration": 77,
+                      "referencedDeclaration": 19,
                       "type": "struct TransferTrade.Seat"
                     },
-                    "id": 68,
+                    "id": 8,
                     "name": "UserDefinedTypeName",
-                    "src": "252:4:2"
+                    "src": "252:4:0"
                   }
                 ],
-                "id": 69,
+                "id": 9,
                 "name": "VariableDeclaration",
-                "src": "252:9:2"
+                "src": "252:9:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "ticketPrice",
-                  "scope": 72,
+                  "scope": 14,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint32",
@@ -940,25 +1777,51 @@
                       "name": "uint32",
                       "type": "uint32"
                     },
-                    "id": 70,
+                    "id": 10,
                     "name": "ElementaryTypeName",
-                    "src": "272:6:2"
+                    "src": "272:6:0"
                   }
                 ],
-                "id": 71,
+                "id": 11,
                 "name": "VariableDeclaration",
-                "src": "272:18:2"
+                "src": "272:18:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "isTransferred",
+                  "scope": 14,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 12,
+                    "name": "ElementaryTypeName",
+                    "src": "301:4:0"
+                  }
+                ],
+                "id": 13,
+                "name": "VariableDeclaration",
+                "src": "301:18:0"
               }
             ],
-            "id": 72,
+            "id": 14,
             "name": "StructDefinition",
-            "src": "68:230:2"
+            "src": "68:294:0"
           },
           {
             "attributes": {
               "canonicalName": "TransferTrade.Seat",
               "name": "Seat",
-              "scope": 117,
+              "scope": 108,
               "visibility": "public"
             },
             "children": [
@@ -966,7 +1829,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "typeOfSeat",
-                  "scope": 77,
+                  "scope": 19,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string",
@@ -979,20 +1842,20 @@
                       "name": "string",
                       "type": "string"
                     },
-                    "id": 73,
+                    "id": 15,
                     "name": "ElementaryTypeName",
-                    "src": "329:6:2"
+                    "src": "393:6:0"
                   }
                 ],
-                "id": 74,
+                "id": 16,
                 "name": "VariableDeclaration",
-                "src": "329:17:2"
+                "src": "393:17:0"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "seatNumber",
-                  "scope": 77,
+                  "scope": 19,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint32",
@@ -1005,25 +1868,25 @@
                       "name": "uint32",
                       "type": "uint32"
                     },
-                    "id": 75,
+                    "id": 17,
                     "name": "ElementaryTypeName",
-                    "src": "357:6:2"
+                    "src": "421:6:0"
                   }
                 ],
-                "id": 76,
+                "id": 18,
                 "name": "VariableDeclaration",
-                "src": "357:17:2"
+                "src": "421:17:0"
               }
             ],
-            "id": 77,
+            "id": 19,
             "name": "StructDefinition",
-            "src": "306:76:2"
+            "src": "370:76:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "defaultSeat",
-              "scope": 117,
+              "scope": 108,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "struct TransferTrade.Seat",
@@ -1034,12 +1897,12 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "Seat",
-                  "referencedDeclaration": 77,
+                  "referencedDeclaration": 19,
                   "type": "struct TransferTrade.Seat"
                 },
-                "id": 78,
+                "id": 20,
                 "name": "UserDefinedTypeName",
-                "src": "390:4:2"
+                "src": "486:4:0"
               },
               {
                 "attributes": {
@@ -1071,13 +1934,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 77,
+                      "referencedDeclaration": 19,
                       "type": "type(struct TransferTrade.Seat storage pointer)",
                       "value": "Seat"
                     },
-                    "id": 79,
+                    "id": 21,
                     "name": "Identifier",
-                    "src": "416:4:2"
+                    "src": "512:4:0"
                   },
                   {
                     "attributes": {
@@ -1092,9 +1955,9 @@
                       "type": "literal_string \"VIP\"",
                       "value": "VIP"
                     },
-                    "id": 80,
+                    "id": 22,
                     "name": "Literal",
-                    "src": "421:5:2"
+                    "src": "517:5:0"
                   },
                   {
                     "attributes": {
@@ -1109,25 +1972,25 @@
                       "type": "int_const 30",
                       "value": "30"
                     },
-                    "id": 81,
+                    "id": 23,
                     "name": "Literal",
-                    "src": "428:2:2"
+                    "src": "524:2:0"
                   }
                 ],
-                "id": 82,
+                "id": 24,
                 "name": "FunctionCall",
-                "src": "416:15:2"
+                "src": "512:15:0"
               }
             ],
-            "id": 83,
+            "id": 25,
             "name": "VariableDeclaration",
-            "src": "390:41:2"
+            "src": "486:41:0"
           },
           {
             "attributes": {
               "constant": false,
               "name": "defaultTicket",
-              "scope": 117,
+              "scope": 108,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "struct TransferTrade.TicketInfo",
@@ -1138,12 +2001,12 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "TicketInfo",
-                  "referencedDeclaration": 72,
+                  "referencedDeclaration": 14,
                   "type": "struct TransferTrade.TicketInfo"
                 },
-                "id": 84,
+                "id": 26,
                 "name": "UserDefinedTypeName",
-                "src": "472:10:2"
+                "src": "534:10:0"
               },
               {
                 "attributes": {
@@ -1176,24 +2039,28 @@
                           "typeString": "literal_string \"18:00\""
                         },
                         {
-                          "typeIdentifier": "t_struct$_Seat_$77_storage",
+                          "typeIdentifier": "t_struct$_Seat_$19_storage",
                           "typeString": "struct TransferTrade.Seat storage ref"
                         },
                         {
                           "typeIdentifier": "t_rational_100000_by_1",
                           "typeString": "int_const 100000"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
                         }
                       ],
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 72,
+                      "referencedDeclaration": 14,
                       "type": "type(struct TransferTrade.TicketInfo storage pointer)",
                       "value": "TicketInfo"
                     },
-                    "id": 85,
+                    "id": 27,
                     "name": "Identifier",
-                    "src": "499:10:2"
+                    "src": "561:10:0"
                   },
                   {
                     "attributes": {
@@ -1208,9 +2075,9 @@
                       "type": "literal_string \"EXO\"",
                       "value": "EXO"
                     },
-                    "id": 86,
+                    "id": 28,
                     "name": "Literal",
-                    "src": "510:5:2"
+                    "src": "572:5:0"
                   },
                   {
                     "attributes": {
@@ -1225,9 +2092,9 @@
                       "type": "literal_string \"2021-06-18\"",
                       "value": "2021-06-18"
                     },
-                    "id": 87,
+                    "id": 29,
                     "name": "Literal",
-                    "src": "517:12:2"
+                    "src": "579:12:0"
                   },
                   {
                     "attributes": {
@@ -1242,9 +2109,9 @@
                       "type": "literal_string \"18:00\"",
                       "value": "18:00"
                     },
-                    "id": 88,
+                    "id": 30,
                     "name": "Literal",
-                    "src": "531:7:2"
+                    "src": "593:7:0"
                   },
                   {
                     "attributes": {
@@ -1252,13 +2119,13 @@
                       "overloadedDeclarations": [
                         null
                       ],
-                      "referencedDeclaration": 83,
+                      "referencedDeclaration": 25,
                       "type": "struct TransferTrade.Seat storage ref",
                       "value": "defaultSeat"
                     },
-                    "id": 89,
+                    "id": 31,
                     "name": "Identifier",
-                    "src": "540:11:2"
+                    "src": "602:11:0"
                   },
                   {
                     "attributes": {
@@ -1273,19 +2140,659 @@
                       "type": "int_const 100000",
                       "value": "100000"
                     },
-                    "id": 90,
+                    "id": 32,
                     "name": "Literal",
-                    "src": "553:6:2"
+                    "src": "615:6:0"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "66616c7365",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "bool",
+                      "type": "bool",
+                      "value": "false"
+                    },
+                    "id": 33,
+                    "name": "Literal",
+                    "src": "623:5:0"
                   }
                 ],
-                "id": 91,
+                "id": 34,
                 "name": "FunctionCall",
-                "src": "499:61:2"
+                "src": "561:68:0"
               }
             ],
-            "id": 92,
+            "id": 35,
             "name": "VariableDeclaration",
-            "src": "472:88:2"
+            "src": "534:95:0"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "TICKET_PRICE",
+              "scope": 108,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 36,
+                "name": "ElementaryTypeName",
+                "src": "653:7:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "commonType": {
+                    "typeIdentifier": "t_rational_5000000000000000_by_1",
+                    "typeString": "int_const 5000000000000000"
+                  },
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "operator": "*",
+                  "type": "int_const 5000000000000000"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "35",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": null,
+                      "token": "number",
+                      "type": "int_const 5",
+                      "value": "5"
+                    },
+                    "id": 37,
+                    "name": "Literal",
+                    "src": "694:1:0"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_rational_1000000000000000_by_1",
+                        "typeString": "int_const 1000000000000000"
+                      },
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "operator": "**",
+                      "type": "int_const 1000000000000000"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "3130",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "number",
+                          "type": "int_const 10",
+                          "value": "10"
+                        },
+                        "id": 38,
+                        "name": "Literal",
+                        "src": "698:2:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "3135",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "number",
+                          "type": "int_const 15",
+                          "value": "15"
+                        },
+                        "id": 39,
+                        "name": "Literal",
+                        "src": "704:2:0"
+                      }
+                    ],
+                    "id": 40,
+                    "name": "BinaryOperation",
+                    "src": "698:8:0"
+                  }
+                ],
+                "id": 41,
+                "name": "BinaryOperation",
+                "src": "694:12:0"
+              }
+            ],
+            "id": 42,
+            "name": "VariableDeclaration",
+            "src": "653:53:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "transferee",
+              "scope": 108,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address payable",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "payable",
+                  "type": "address payable"
+                },
+                "id": 43,
+                "name": "ElementaryTypeName",
+                "src": "730:15:0"
+              }
+            ],
+            "id": 44,
+            "name": "VariableDeclaration",
+            "src": "730:33:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "GetMyTransferringTicket"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "concertName",
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 45,
+                        "name": "ElementaryTypeName",
+                        "src": "820:6:0"
+                      }
+                    ],
+                    "id": 46,
+                    "name": "VariableDeclaration",
+                    "src": "820:18:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "day",
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 47,
+                        "name": "ElementaryTypeName",
+                        "src": "840:6:0"
+                      }
+                    ],
+                    "id": 48,
+                    "name": "VariableDeclaration",
+                    "src": "840:10:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "time",
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 49,
+                        "name": "ElementaryTypeName",
+                        "src": "852:6:0"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "VariableDeclaration",
+                    "src": "852:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "typeOfSeat",
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "865:6:0"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "865:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "seatNumber",
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint32",
+                          "type": "uint32"
+                        },
+                        "id": 53,
+                        "name": "ElementaryTypeName",
+                        "src": "884:6:0"
+                      }
+                    ],
+                    "id": 54,
+                    "name": "VariableDeclaration",
+                    "src": "884:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "ticketPrice",
+                      "scope": 58,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint32",
+                          "type": "uint32"
+                        },
+                        "id": 55,
+                        "name": "ElementaryTypeName",
+                        "src": "903:6:0"
+                      }
+                    ],
+                    "id": 56,
+                    "name": "VariableDeclaration",
+                    "src": "903:18:0"
+                  }
+                ],
+                "id": 57,
+                "name": "ParameterList",
+                "src": "819:103:0"
+              }
+            ],
+            "id": 58,
+            "name": "EventDefinition",
+            "src": "790:133:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "GetMyTicket"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "concertName",
+                      "scope": 72,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 59,
+                        "name": "ElementaryTypeName",
+                        "src": "947:6:0"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "VariableDeclaration",
+                    "src": "947:18:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "day",
+                      "scope": 72,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 61,
+                        "name": "ElementaryTypeName",
+                        "src": "967:6:0"
+                      }
+                    ],
+                    "id": 62,
+                    "name": "VariableDeclaration",
+                    "src": "967:10:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "time",
+                      "scope": 72,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 63,
+                        "name": "ElementaryTypeName",
+                        "src": "979:6:0"
+                      }
+                    ],
+                    "id": 64,
+                    "name": "VariableDeclaration",
+                    "src": "979:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "typeOfSeat",
+                      "scope": 72,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 65,
+                        "name": "ElementaryTypeName",
+                        "src": "992:6:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "VariableDeclaration",
+                    "src": "992:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "seatNumber",
+                      "scope": 72,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint32",
+                          "type": "uint32"
+                        },
+                        "id": 67,
+                        "name": "ElementaryTypeName",
+                        "src": "1011:6:0"
+                      }
+                    ],
+                    "id": 68,
+                    "name": "VariableDeclaration",
+                    "src": "1011:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "ticketPrice",
+                      "scope": 72,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint32",
+                          "type": "uint32"
+                        },
+                        "id": 69,
+                        "name": "ElementaryTypeName",
+                        "src": "1030:6:0"
+                      }
+                    ],
+                    "id": 70,
+                    "name": "VariableDeclaration",
+                    "src": "1030:18:0"
+                  }
+                ],
+                "id": 71,
+                "name": "ParameterList",
+                "src": "946:103:0"
+              }
+            ],
+            "id": 72,
+            "name": "EventDefinition",
+            "src": "929:121:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 108,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 73,
+                "name": "ParameterList",
+                "src": "1089:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 74,
+                "name": "ParameterList",
+                "src": "1099:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address payable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 44,
+                              "type": "address payable",
+                              "value": "transferee"
+                            },
+                            "id": 75,
+                            "name": "Identifier",
+                            "src": "1110:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 123,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 76,
+                                "name": "Identifier",
+                                "src": "1123:3:0"
+                              }
+                            ],
+                            "id": 77,
+                            "name": "MemberAccess",
+                            "src": "1123:10:0"
+                          }
+                        ],
+                        "id": 78,
+                        "name": "Assignment",
+                        "src": "1110:23:0"
+                      }
+                    ],
+                    "id": 79,
+                    "name": "ExpressionStatement",
+                    "src": "1110:23:0"
+                  }
+                ],
+                "id": 80,
+                "name": "Block",
+                "src": "1099:42:0"
+              }
+            ],
+            "id": 81,
+            "name": "FunctionDefinition",
+            "src": "1078:63:0"
           },
           {
             "attributes": {
@@ -1297,8 +2804,8 @@
                 null
               ],
               "name": "transferApplication",
-              "scope": 117,
-              "stateMutability": "nonpayable",
+              "scope": 108,
+              "stateMutability": "view",
               "superFunction": null,
               "visibility": "public"
             },
@@ -1310,9 +2817,9 @@
                   ]
                 },
                 "children": [],
-                "id": 93,
+                "id": 82,
                 "name": "ParameterList",
-                "src": "673:2:2"
+                "src": "1234:2:0"
               },
               {
                 "attributes": {
@@ -1321,79 +2828,249 @@
                   ]
                 },
                 "children": [],
-                "id": 94,
+                "id": 83,
                 "name": "ParameterList",
-                "src": "683:0:2"
+                "src": "1249:0:0"
               },
               {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 95,
-                "name": "Block",
-                "src": "683:103:2"
-              }
-            ],
-            "id": 96,
-            "name": "FunctionDefinition",
-            "src": "645:141:2"
-          },
-          {
-            "attributes": {
-              "documentation": "@dev 이미 거래중인 티켓인 경우",
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "alreadyTransferringTicket",
-              "scope": 117,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "internal"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 97,
-                "name": "ParameterList",
-                "src": "894:2:2"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_d80a6c77897b485d77fb505a9558a0f2564b275ecd38570a0c822ce003412723",
+                                  "typeString": "literal_string \"Already ticket is transferred\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                126,
+                                127
+                              ],
+                              "referencedDeclaration": 127,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 84,
+                            "name": "Identifier",
+                            "src": "1403:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "isTransferred",
+                                  "referencedDeclaration": 13,
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 35,
+                                      "type": "struct TransferTrade.TicketInfo storage ref",
+                                      "value": "defaultTicket"
+                                    },
+                                    "id": 85,
+                                    "name": "Identifier",
+                                    "src": "1411:13:0"
+                                  }
+                                ],
+                                "id": 86,
+                                "name": "MemberAccess",
+                                "src": "1411:27:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "66616c7365",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "bool",
+                                  "type": "bool",
+                                  "value": "false"
+                                },
+                                "id": 87,
+                                "name": "Literal",
+                                "src": "1442:5:0"
+                              }
+                            ],
+                            "id": 88,
+                            "name": "BinaryOperation",
+                            "src": "1411:36:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "416c7265616479207469636b6574206973207472616e73666572726564",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Already ticket is transferred\"",
+                              "value": "Already ticket is transferred"
+                            },
+                            "id": 89,
+                            "name": "Literal",
+                            "src": "1449:31:0"
+                          }
+                        ],
+                        "id": 90,
+                        "name": "FunctionCall",
+                        "src": "1403:78:0"
+                      }
+                    ],
+                    "id": 91,
+                    "name": "ExpressionStatement",
+                    "src": "1403:78:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 103,
+                              "type": "function () view",
+                              "value": "pay"
+                            },
+                            "id": 92,
+                            "name": "Identifier",
+                            "src": "1510:3:0"
+                          }
+                        ],
+                        "id": 93,
+                        "name": "FunctionCall",
+                        "src": "1510:5:0"
+                      }
+                    ],
+                    "id": 94,
+                    "name": "ExpressionStatement",
+                    "src": "1510:5:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            null
+                          ],
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                null
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 107,
+                              "type": "function () view",
+                              "value": "changeTicketInfo"
+                            },
+                            "id": 95,
+                            "name": "Identifier",
+                            "src": "1557:16:0"
+                          }
+                        ],
+                        "id": 96,
+                        "name": "FunctionCall",
+                        "src": "1557:18:0"
+                      }
+                    ],
+                    "id": 97,
+                    "name": "ExpressionStatement",
+                    "src": "1557:18:0"
+                  }
+                ],
                 "id": 98,
-                "name": "ParameterList",
-                "src": "906:0:2"
-              },
-              {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 99,
                 "name": "Block",
-                "src": "906:10:2"
+                "src": "1249:334:0"
               }
             ],
-            "id": 100,
+            "id": 99,
             "name": "FunctionDefinition",
-            "src": "860:56:2"
+            "src": "1206:377:0"
           },
           {
             "attributes": {
@@ -1405,8 +3082,8 @@
                 null
               ],
               "name": "pay",
-              "scope": 117,
-              "stateMutability": "nonpayable",
+              "scope": 108,
+              "stateMutability": "view",
               "superFunction": null,
               "visibility": "internal"
             },
@@ -1418,9 +3095,9 @@
                   ]
                 },
                 "children": [],
-                "id": 101,
+                "id": 100,
                 "name": "ParameterList",
-                "src": "1046:2:2"
+                "src": "1890:2:0"
               },
               {
                 "attributes": {
@@ -1429,9 +3106,9 @@
                   ]
                 },
                 "children": [],
-                "id": 102,
+                "id": 101,
                 "name": "ParameterList",
-                "src": "1058:0:2"
+                "src": "1907:0:0"
               },
               {
                 "attributes": {
@@ -1440,14 +3117,14 @@
                   ]
                 },
                 "children": [],
-                "id": 103,
+                "id": 102,
                 "name": "Block",
-                "src": "1058:10:2"
+                "src": "1907:165:0"
               }
             ],
-            "id": 104,
+            "id": 103,
             "name": "FunctionDefinition",
-            "src": "1033:35:2"
+            "src": "1878:194:0"
           },
           {
             "attributes": {
@@ -1459,8 +3136,8 @@
                 null
               ],
               "name": "changeTicketInfo",
-              "scope": 117,
-              "stateMutability": "nonpayable",
+              "scope": 108,
+              "stateMutability": "view",
               "superFunction": null,
               "visibility": "internal"
             },
@@ -1472,154 +3149,46 @@
                   ]
                 },
                 "children": [],
-                "id": 105,
+                "id": 104,
                 "name": "ParameterList",
-                "src": "1187:2:2"
+                "src": "2191:2:0"
               },
               {
                 "attributes": {
                   "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 105,
+                "name": "ParameterList",
+                "src": "2208:0:0"
+              },
+              {
+                "attributes": {
+                  "statements": [
                     null
                   ]
                 },
                 "children": [],
                 "id": 106,
-                "name": "ParameterList",
-                "src": "1199:0:2"
-              },
-              {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 107,
                 "name": "Block",
-                "src": "1199:10:2"
+                "src": "2208:194:0"
               }
             ],
-            "id": 108,
+            "id": 107,
             "name": "FunctionDefinition",
-            "src": "1162:47:2"
-          },
-          {
-            "attributes": {
-              "documentation": "@dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.",
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "getMyTransferringTicket",
-              "scope": 117,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 109,
-                "name": "ParameterList",
-                "src": "1350:2:2"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 110,
-                "name": "ParameterList",
-                "src": "1360:0:2"
-              },
-              {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 111,
-                "name": "Block",
-                "src": "1360:10:2"
-              }
-            ],
-            "id": 112,
-            "name": "FunctionDefinition",
-            "src": "1318:52:2"
-          },
-          {
-            "attributes": {
-              "documentation": "@dev 마이페이지에서 소유하고 있는 티켓을 보여준다.",
-              "implemented": true,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "getMyTicket",
-              "scope": 117,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 113,
-                "name": "ParameterList",
-                "src": "1493:2:2"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 114,
-                "name": "ParameterList",
-                "src": "1503:0:2"
-              },
-              {
-                "attributes": {
-                  "statements": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 115,
-                "name": "Block",
-                "src": "1503:10:2"
-              }
-            ],
-            "id": 116,
-            "name": "FunctionDefinition",
-            "src": "1473:40:2"
+            "src": "2166:236:0"
           }
         ],
-        "id": 117,
+        "id": 108,
         "name": "ContractDefinition",
-        "src": "36:1480:2"
+        "src": "36:2699:0"
       }
     ],
-    "id": 118,
+    "id": 109,
     "name": "SourceUnit",
-    "src": "0:1516:2"
+    "src": "0:2735:0"
   },
   "compiler": {
     "name": "solc",
@@ -1627,15 +3196,9 @@
   },
   "networks": {},
   "schemaVersion": "3.3.3",
-  "updatedAt": "2021-05-24T11:00:58.121Z",
+  "updatedAt": "2021-05-24T11:55:52.161Z",
   "devdoc": {
     "methods": {
-      "getMyTicket()": {
-        "details": "마이페이지에서 소유하고 있는 티켓을 보여준다."
-      },
-      "getMyTransferringTicket()": {
-        "details": "마이페이지에서 진행중인 양도거래 티켓을 보여준다."
-      },
       "transferApplication()": {
         "details": "양도 신청 처리 함수"
       }
