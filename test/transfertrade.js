@@ -1,5 +1,5 @@
 const Trade = artifacts.require("TransferTrade");
-// const assertRevert = require('./asserRevert');
+const assertRevert = require('./asserRevert');
 
 contract('Trade', function(accounts) {
     let trade;
@@ -22,29 +22,30 @@ contract('Trade', function(accounts) {
 
     describe('ChangeTicketInfo', function () {
         it("ChangeTicketInfo test", async () => {
-            const onwer = await trade.changeTicketInfo.call();
+            const owner = await trade.changeTicketInfo.call();
 
-            console.log("onwer : ", onwer);
+            console.log("owner : ", owner);
 
-            assert.equal(onwer, 0x627306090abaB3A6e1400e9345bC60c78a8BEf57, "owner not change");
+            assert.equal(owner, 0x627306090abaB3A6e1400e9345bC60c78a8BEf57, "owner not change");
         });
     })
 
     describe('Pay', function () {
         it('should ticket price equal TicketPrice', async () => {
             // bet
-            let flag = await trade.pay.call({from: accounts[0], value: TicketPrice});
-            assert.equal(flag, true, "pay function return false");
+            let result = await trade.pay({from: accounts[0], value: TicketPrice});
+            await assertRevert(result);
         })
 
         it('should owner balance check', async () => {
             // bet
+            // accounts[1]이 티켓 default의 owner인 것으로 확인
             let preBalance = await web3.eth.getBalance(accounts[1]);
-            await trade.pay.call({from: accounts[0], to: accounts[1], value: TicketPrice});
+            await trade.pay({from: accounts[0], value: TicketPrice});
             let balance = await web3.eth.getBalance(accounts[1]);
             console.log('preBalance : ', preBalance);
             console.log('Balance : ', balance);
-            assert.equal(balance, preBalance, "Shit! I've lost my money!!!!");
+            assert.equal(balance, Number(preBalance)+Number(TicketPrice), "Money didn't come in....");
         })
     })
 });
