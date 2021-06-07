@@ -4,33 +4,37 @@ import './App.css'
 import NavBar from './NavBar.js'
 import { Button, ListGroup, Row, Col, Modal, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Web3 from 'web3';
+import TransferTrade from "./contracts/TransferTrade.json";
+import getWeb3 from "./getWeb3";
 
 //let TTcontract = '컨트랙트 주소'
 //let TTcontractABI = '컨트랙트 ABI'
+
 class App extends Component{
 
-  /**
-    * @dev initialize Web3
-    */
-  initWeb3 = async () => {
-    if(window.ethereum){
-      this.web3 = new Web3(window.ethereum);
-      try{
-        await window.ethereum.enable();
+  state = { web3: null, accounts: null, contract: null };
 
-      }catch(error){
-        console.log(`User denied account access error : ${error}`)
-      }
-    }else if(window.web3){
-      this.web3 = new Web3(Web3.currentProvider);
-    }else{
-      console.log("Non ethereum browser detected. You should consider trying MetaMask!");
+  componentDidMount = async () => {
+    try{
+      const web3 = await getWeb3();
+
+      const accounts = await web3.eth.getAccounts();
+
+      const networkId = await web3.eth.net.getId();
+      const deployedNetwork = TransferTrade.networks[networkId];
+      const instance = new web3.eth.Contract(
+          TransferTrade.abi,
+          deployedNetwork && deployedNetwork.address,
+      );
+
+      this.setState({ web3, accounts, contract: instance });
+    } catch (error) {
+      alert(
+          'Failed to load web3, accounts, or contract. Check console for details',
+      );
+      console.error(error);
     }
-    let accounts = await this.web3.eth.getAccounts();
-    this.account = accounts[0];
-
-  }
+  };
 
   /**
     * @dev Getting 'GetMyTicket' event. 
