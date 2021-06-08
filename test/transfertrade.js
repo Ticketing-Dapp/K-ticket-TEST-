@@ -48,4 +48,29 @@ contract('Trade', function(accounts) {
             assert.equal(balance, Number(preBalance)+Number(TicketPrice), "Money didn't come in....");
         })
     })
+
+    describe('check my ticket', function () {
+        // 함수 반환값을 확인하고 싶을 때 .call() 사용, 함수의 동작 후의 과정이 궁금한 경우 .call() 사용 x
+        it('check my ticket', async () => {
+            let concertName = "EXO";
+            const transferee = await trade.transferee();
+            console.log("transferee : ", transferee);
+
+            let beforeTransferring = await trade.getMyTicket.call({from: accounts[1]}); // owner에서 확인 요청
+            console.log("owner : ", accounts[1]);
+            assert.equal(accounts[1], beforeTransferring[1], "Not equal owner");
+            assert.equal(concertName, beforeTransferring[0], "Not equal concert name");
+            await trade.changeTicketInfo({from: transferee}); // 이더가 없으므로 티켓 owner만 수정했을 때도 잘 동작하는 지 확인
+            let result = await trade.getMyTicket.call({from: transferee}); // transferee == accounts[1]
+            console.log("owner : ", transferee);
+            assert.equal(transferee, result[1], "Not equal owner");
+            assert.equal(concertName, result[0], "Not equal concert name");
+        })
+
+        it('check my transferring ticket', async () => {
+            let concertName = "EXO";
+            let checkTransferring = await trade.getMyTransferringTicket.call({from: accounts[1]}); // owner에서 확인 요청
+            assert.equal(concertName, checkTransferring, "Not equal concert name");
+        })
+    })
 });

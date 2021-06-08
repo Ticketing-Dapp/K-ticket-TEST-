@@ -67,6 +67,7 @@ contract TransferTrade {
         // 현재 가나슈를 실행중이 아니라서 ticket info의 owner 정보가 없어서 주석처리함
         require(msg.value == TICKET_PRICE, "Not enough ETH");
 
+        defaultTicket.isTransferred = true; // 지불을 진행할 수 있는 상태이기 때문에, 양도거래 진행 중임을 표시한다.
         defaultTicket.owner.transfer(TICKET_PRICE);
         emit FinishPay(transferee);
 
@@ -85,15 +86,26 @@ contract TransferTrade {
 
     /**
     * @dev 마이페이지에서 진행중인 양도거래 티켓을 보여준다.
+    *      (지불이 끝나야 거래 성사가 되는 것이기 때문에, 이는 양도인에게만 보여주면 된다.)
+    * @return 콘서트 이름을 반환한다. (이는 테스트를 위한 용도이다.)
     */
-    function getMyTransferringTicket() public {
-
+    function getMyTransferringTicket() public returns (string memory){
+        require(defaultTicket.isTransferred == false, "Ticket trade is completed.");
+        emit GetMyTransferringTicket(defaultTicket.concertName, defaultTicket.day, defaultTicket.time, defaultTicket.seat.typeOfSeat, defaultTicket.seat.seatNumber, defaultTicket.ticketPrice);
+        string memory name = defaultTicket.concertName;
+        return name;
     }
 
     /**
     * @dev 마이페이지에서 소유하고 있는 티켓을 보여준다.
+    * @return 콘서트 이름과 현재 티켓 소유주를 반환한다. (이는 테스트를 위한 용도이다.)
+    * 
     */
-    function getMyTicket() public {
-
+    function getMyTicket() public returns (string memory, address){
+        require(msg.sender == defaultTicket.owner, "You aren't owner.. So it's impossible confirm.");
+        emit GetMyTicket(defaultTicket.concertName, defaultTicket.day, defaultTicket.time, defaultTicket.seat.typeOfSeat, defaultTicket.seat.seatNumber, defaultTicket.ticketPrice);
+        string memory name = defaultTicket.concertName;
+        address ownerAddress = defaultTicket.owner;
+        return (name, ownerAddress);
     }
 }
