@@ -53,12 +53,29 @@ class App extends Component{
     let evnets = await this.TTcontract.getPastEvents('GetMyTransferringTicket', {fromBlock: ,toBlock: 'latest'});
   }
 */
+  constructor(props) {
+    super(props);
 
+    this.state = {
+    title: "공연이름",
+    day:"",
+    time:"",
+    seat:"",
+    price:"",
+    };
+}
   /**
     * @dev Viewing Concert Information 
     */
   alertClicked=()=>{
-    alert("OK");
+    this.setState({
+      title: "오마이걸",
+      day:" 6월 18일",
+      time:" 18:00시",
+      seat:" VIP 30",
+      price:"100000000",
+
+      });
   }
   /**
     * @dev 양도 거래 목록
@@ -97,14 +114,14 @@ class App extends Component{
     return (
       <Modal.Dialog>
         <Modal.Header style={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
-          <Modal.Title> ~공연 이름~ {_user}</Modal.Title>
+          <Modal.Title> {this.state.title}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>공연 날짜 : </p>
-          <p>공연 시간 : </p>
-          <p>좌석 정보 : </p>
-          <p>티켓 가격 : </p>
+          <p>공연 날짜 : {this.state.day}</p>
+          <p>공연 시간 : {this.state.time}</p>
+          <p>좌석 정보 : {this.state.seat}</p>
+          <p>티켓 가격 : {this.state.price}</p>
         </Modal.Body>
 
         <Modal.Footer style={{ display: "flex", justifyContent: "center", alignItems: "center", }}>
