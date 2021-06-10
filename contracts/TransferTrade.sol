@@ -1,4 +1,5 @@
 pragma solidity 0.5.16;
+pragma experimental ABIEncoderV2;
 
 contract TransferTrade {
 
@@ -19,7 +20,7 @@ contract TransferTrade {
 
     // 디폴트 티켓 생성
     Seat public defaultSeat = Seat("VIP", 30);
-    TicketInfo defaultTicket = TicketInfo("EXO", "2021-06-18", "18:00", defaultSeat, 100000, false, 0xf17f52151EbEF6C7334FAD080c5704D77216b732);
+    TicketInfo defaultTicket = TicketInfo("오마이걸", "2021-06-18", "18:00", defaultSeat, 100000, false, 0x1c049AC608CB6B8B748Ed0449B9d592b9CDe2314);
 
     // 상수
     uint256 constant internal TICKET_PRICE = 5 * 10 ** 15;
@@ -31,16 +32,24 @@ contract TransferTrade {
     event GetMyTransferringTicket(string concertName, string day, string time, string typeOfSeat, uint32 seatNumber, uint32 ticketPrice);
     event GetMyTicket(string concertName, string day, string time, string typeOfSeat, uint32 seatNumber, uint32 ticketPrice);
     event FinishPay(address transferee);
+    event GetDefaultTicket(string concertName, string day, string time, Seat defaultSeat, uint32 ticketPrice, address owner);
 
     // 생성자
-    constructor() public {
+    constructor() public payable {
         transferee = msg.sender;
+    }
+
+    /**
+    * @dev DefaultTicket 가져오기
+    */
+    function getDefaultTicket() public {
+        emit GetDefaultTicket(defaultTicket.concertName, defaultTicket.day, defaultTicket.time, defaultTicket.seat, defaultTicket.ticketPrice, defaultTicket.owner);
     }
 
     /**
     * @dev 양도 신청 처리 함수
     */
-    function transferApplication() public returns (bool){
+    function transferApplication() public payable returns (bool){
         // alreadyTransferringTicket을 확인, 임시로 데모를 위해 require만을 사용하여 거래가 진행중인지 확인한다.
         require(defaultTicket.isTransferred == false, "Already ticket is transferred");
 
@@ -63,15 +72,13 @@ contract TransferTrade {
     /**
     * @dev 양수인의 계좌에서 티켓 가격을 받아 양도인에게 송금한다.
     */
-    function pay() public payable returns (bool) {
+    function pay() public payable {
         // 현재 가나슈를 실행중이 아니라서 ticket info의 owner 정보가 없어서 주석처리함
         require(msg.value == TICKET_PRICE, "Not enough ETH");
 
         defaultTicket.isTransferred = true; // 지불을 진행할 수 있는 상태이기 때문에, 양도거래 진행 중임을 표시한다.
         defaultTicket.owner.transfer(TICKET_PRICE);
         emit FinishPay(transferee);
-
-        return true;
     }
 
     /**
